@@ -1,0 +1,11 @@
+# Accept a dictionary from the user
+user_input = input("Enter a dictionary  : ")
+
+# Convert the input string to a dictionary
+user_dict = eval(user_input)
+
+# Sort the dictionary by keys
+sorted_dict = dict(sorted(user_dict.items()))
+
+# Print the sorted dictionary
+print("Sorted dictionary:", sorted_dict)

@@ -1,0 +1,17 @@
+def has_unique_characters(input_string):
+    # Remove spaces and make all characters lowercase
+    cleaned_string = input_string.replace(" ", "").lower()
+    
+    # Use a set to store characters and check for duplicates
+    unique_chars = set()
+    
+    for char in cleaned_string:
+        if char in unique_chars:
+            return False  # Duplicate character found
+        unique_chars.add(char)
+    
+    return True  # All characters are unique
+
+# Get input from user
+input_string = input("Enter a string: ")
+print(has_unique_characters(input_string))

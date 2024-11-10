@@ -1,0 +1,30 @@
+import string
+
+def count_word_frequency(text):
+    # Remove punctuation and convert text to lowercase
+    cleaned_text = text.translate(str.maketrans("", "", string.punctuation)).lower()
+    
+    # Split text into words
+    words = cleaned_text.split()
+    
+    # Use a dictionary to count each word's frequency
+    word_counts = {}
+    
+    for word in words:
+        if word in word_counts:
+            word_counts[word] += 1
+        else:
+            word_counts[word] = 1
+    
+    return word_counts
+
+# Get a paragraph of text from the user
+text = input("Enter a paragraph of text: ")
+
+# Get the word frequency dictionary
+word_counts = count_word_frequency(text)
+
+# Display each word and its frequency
+print("\nWord Frequencies:")
+for word, count in word_counts.items():
+    print(f"{word}: {count}")

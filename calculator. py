@@ -1,0 +1,29 @@
+
+def calculate(num1, num2, operation):
+    if operation == '+':
+        return num1 + num2
+    elif operation == '-':
+        return num1 - num2
+    elif operation == '*':
+        return num1 * num2
+    elif operation == '/':
+        if num2 != 0:
+            return num1 / num2
+        else:
+            return "Error: Cannot divide by zero"
+    else:
+        return "Invalid op
+num1 = float(input("Enter the first number: "))
+num2 = float(input("Enter the second number: "))
+
+# Ask the user to select an operation
+print("Select operation:")
+print("Enter + for addition")
+print("Enter - for subtraction")
+print("Enter * for multiplication")
+print("Enter / for division")
+operation = input("Enter the operation (+, -, *, /): ")
+
+# Calculate and display the result
+result = calculate(num1, num2, operation)
+print("The result is:", result)

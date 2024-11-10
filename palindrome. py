@@ -1,0 +1,12 @@
+def is_palindrome(s):
+    # Remove spaces and convert to lowercase
+    cleaned_str = s.replace(" ", "").lower()
+    
+    # Check if the cleaned string is the same backward and forward
+    return cleaned_str == cleaned_str[::-1]
+
+# Taking input from the user
+input_string = input("Enter a string: ")
+
+# Checking and printing if the input string is a palindrome
+print(is_palindrome(input_string))
